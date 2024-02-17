@@ -1,5 +1,6 @@
-import { Room } from "./Room";
+"use client";
 
+import Live from "@/components/Live";
 
 export default function Page() {
   return (
@@ -7,6 +8,7 @@ export default function Page() {
       <h1 className="text-2xl text-white"> 
         Liveblocks Figma Clone
       </h1>
+      <Live/>
     </div>
   );
 }
