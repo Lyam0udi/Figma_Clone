@@ -35,7 +35,7 @@ const Live = () => {
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       onPointerDown={handlePointerDown}
-      className ="h-[100vh] w-full flex justify-center items-center text-center border-2 border-green-500"
+      className ="h-[100vh] w-full flex justify-center items-center text-center"
     >
     <h1 className="text-2xl text-white"> 
       Liveblocks Figma Clone
