@@ -1,8 +1,9 @@
 import { useMyPresence, useOthers } from "@/liveblocks.config"
-import { CursorMode } from "@/types/type";
+import { CursorMode, Reaction } from "@/types/type";
 import React, { useCallback, useEffect, useState } from "react";
 import CursorChat from "./cursor/CursorChat";
 import LiveCursors from "./cursor/LiveCursors"
+import ReactionSelector from "./reaction/ReactionButton";
 
 const Live = () => {
     const others = useOthers();
@@ -12,13 +13,17 @@ const Live = () => {
       mode: CursorMode.Hidden,
     })
 
+    const [reaction, setReaction] = useState<Reaction[]>([])
+
     const handlePointerMove = useCallback( (event: React.PointerEvent) => {
       event.preventDefault();
 
-      const x = event.clientX - event.currentTarget.getBoundingClientRect().x;
-      const y = event.clientY - event.currentTarget.getBoundingClientRect().y;
-
-      updateMyPresence({ cursor: {x,y} });
+      if(cursor == null || cursorState.mode !== CursorMode.ReactionSelector) {
+        const x = event.clientX - event.currentTarget.getBoundingClientRect().x;
+        const y = event.clientY - event.currentTarget.getBoundingClientRect().y;
+  
+        updateMyPresence({ cursor: {x,y} });
+      }
     },[])
 
     const handlePointerLeave = useCallback( (event: React.PointerEvent) => {
@@ -46,6 +51,10 @@ const Live = () => {
         } else if (e.key === 'Escape') {
           updateMyPresence ({ message: ''})
           setCursorState({ mode: CursorMode.Hidden})
+        } else if(e.key === 'e') {
+          setCursorState({
+            mode: CursorMode.ReactionSelector,
+          })
         }
       }
       
@@ -86,6 +95,13 @@ const Live = () => {
       />
     )}
 
+    { cursorState.mode === CursorMode.ReactionSelector && (
+      <ReactionSelector 
+        setReaction={(reaction) => {
+          setReaction(reaction);
+        }}
+      />
+    )}
 
         <LiveCursors others={others} />
     </div>
