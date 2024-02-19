@@ -1,5 +1,5 @@
 import { useMyPresence, useOthers } from "@/liveblocks.config"
-import { CursorMode, Reaction } from "@/types/type";
+import { CursorMode, CursorState, Reaction } from "@/types/type";
 import React, { useCallback, useEffect, useState } from "react";
 import CursorChat from "./cursor/CursorChat";
 import LiveCursors from "./cursor/LiveCursors"
@@ -9,7 +9,7 @@ const Live = () => {
     const others = useOthers();
     const [{cursor}, updateMyPresence ] = useMyPresence() as any;
 
-    const [cursorState, setCursorState] = useState({
+    const [cursorState, setCursorState] = useState<CursorState>({
       mode: CursorMode.Hidden,
     })
 
@@ -38,7 +38,20 @@ const Live = () => {
       const y = event.clientY - event.currentTarget.getBoundingClientRect().y;
 
       updateMyPresence({ cursor: {x,y} });
-    },[])
+
+      setCursorState ((state: CursorState) => 
+      cursorState.mode === CursorMode.Reaction ? 
+      { ...state,isPressed: true} :state
+      );
+
+    },[cursorState.mode, setCursorState])
+
+    const handlePointerUp = useCallback((event: React.PointerEvent) => {
+      setCursorState ((state: CursorState) => 
+        cursorState.mode === CursorMode.Reaction ? 
+        { ...state,isPressed: true} :state
+        );
+    }, [cursorState.mode, setCursorState])
 
     useEffect(() => {
       const onKeyUp = (e: KeyboardEvent) => {
@@ -80,6 +93,7 @@ const Live = () => {
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
       className ="h-[100vh] w-full flex justify-center items-center text-center"
     >
     <h1 className="text-2xl text-white"> 
