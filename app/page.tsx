@@ -7,9 +7,9 @@ import Live from "@/components/Live";
 import Navbar from "@/components/Navbar";
 import RightSidebar from "@/components/RightSidebar";
 import { useRef, useEffect, useState } from "react";
-import { handleCanvasMouseDown, handleResize, initializeFabric } from "@/lib/canvas";
+import { handleCanvaseMouseMove, handleCanvasMouseDown, handleCanvasMouseUp, handleResize, initializeFabric } from "@/lib/canvas";
 import { ActiveElement } from "@/types/type";
-// import { useStorage } from "@/liveblocks.config";
+import { useMutation, useStorage } from "@/liveblocks.config";
 
 export default function Page() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -18,9 +18,24 @@ export default function Page() {
   const shapeRef = useRef<fabric.Object | null>(null);
   const selectedShapeRef = useRef<String | null>('rectangle');
 
-  // const canvasObjects = useStorage((root) => root.canvasObjects)
+  const activeObjectRef = useRef<fabric.Object | null>(null);
 
-  const [activeElement, setactiveElement] = useState<ActiveElement>({
+  const canvasObjects = useStorage((root) => root.canvasObjects);
+
+  const syncShapeInStorage = useMutation(({ storage } , object) =>{
+    if(!object) return;
+
+    const { objectId } = object;
+
+    const shapeData = object.toJSON();
+    shapeData.objectId = objectId;
+
+    const canvasObjects = storage.get('canvasObjects');
+
+    canvasObjects.set(objectId, shapeData);
+  }, []);
+
+  const [activeElement, setActiveElement] = useState<ActiveElement>({
     name: '',
     value: '',
     icon: '',
@@ -28,7 +43,7 @@ export default function Page() {
   })
 
   const handleActiveElement = (elem: ActiveElement) => {
-    setactiveElement(elem);
+    setActiveElement(elem);
 
     selectedShapeRef.current = elem?.value as String;
   }
@@ -45,6 +60,30 @@ export default function Page() {
         selectedShapeRef,
       })
     })
+
+    canvas.on("mouse:up", (options) => {
+      handleCanvasMouseUp({
+        canvas,
+        isDrawing,
+        shapeRef,
+        selectedShapeRef,
+        syncShapeInStorage,
+        setActiveElement,
+        activeObjectRef,
+      })
+    })
+
+    canvas.on("mouse:move", (options) => {
+      handleCanvaseMouseMove({
+        options,
+        canvas,
+        isDrawing,
+        shapeRef,
+        selectedShapeRef,
+        syncShapeInStorage
+      })
+    })
+
     window.addEventListener("resize", () => {
       handleResize({ fabricRef })
     })
