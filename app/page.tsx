@@ -9,6 +9,7 @@ import RightSidebar from "@/components/RightSidebar";
 import { useRef, useEffect, useState } from "react";
 import { handleCanvasMouseDown, handleResize, initializeFabric } from "@/lib/canvas";
 import { ActiveElement } from "@/types/type";
+// import { useStorage } from "@/liveblocks.config";
 
 export default function Page() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -16,6 +17,8 @@ export default function Page() {
   const isDrawing = useRef(false);
   const shapeRef = useRef<fabric.Object | null>(null);
   const selectedShapeRef = useRef<String | null>('rectangle');
+
+  // const canvasObjects = useStorage((root) => root.canvasObjects)
 
   const [activeElement, setactiveElement] = useState<ActiveElement>({
     name: '',
