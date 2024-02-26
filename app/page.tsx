@@ -7,7 +7,7 @@ import Live from "@/components/Live";
 import Navbar from "@/components/Navbar";
 import RightSidebar from "@/components/RightSidebar";
 import { useRef, useEffect, useState } from "react";
-import { handleCanvaseMouseMove, handleCanvasMouseDown, handleCanvasMouseUp, handleResize, initializeFabric } from "@/lib/canvas";
+import { handleCanvaseMouseMove, handleCanvasMouseDown, handleCanvasMouseUp, handleCanvasObjectModified, handleResize, initializeFabric, renderCanvas } from "@/lib/canvas";
 import { ActiveElement } from "@/types/type";
 import { useMutation, useStorage } from "@/liveblocks.config";
 
@@ -61,6 +61,17 @@ export default function Page() {
       })
     })
 
+    canvas.on("mouse:move", (options) => {
+      handleCanvaseMouseMove({
+        options,
+        canvas,
+        isDrawing,
+        shapeRef,
+        selectedShapeRef,
+        syncShapeInStorage
+      })
+    })
+
     canvas.on("mouse:up", (options) => {
       handleCanvasMouseUp({
         canvas,
@@ -73,13 +84,9 @@ export default function Page() {
       })
     })
 
-    canvas.on("mouse:move", (options) => {
-      handleCanvaseMouseMove({
+    canvas.on("object:modified", (options) => {
+      handleCanvasObjectModified({
         options,
-        canvas,
-        isDrawing,
-        shapeRef,
-        selectedShapeRef,
         syncShapeInStorage
       })
     })
@@ -88,6 +95,14 @@ export default function Page() {
       handleResize({ fabricRef })
     })
   }, [])
+
+  useEffect(() => {
+    renderCanvas({
+      fabricRef,
+      canvasObjects,
+      activeObjectRef
+    })
+  }, [canvasObjects])
 
   return (
     <main className="h-screen overflow-hidden">
