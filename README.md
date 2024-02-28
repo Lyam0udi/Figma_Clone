@@ -5,7 +5,7 @@ A clone of Figma built with Next.js, TypeScript, Liveblocks, Fabric.js, Shadcn, 
 ## 📋 Table of Contents
 
 1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
+2. ⚙️ [Technologies](#technologies)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets](#snippets)
@@ -29,13 +29,14 @@ If you're getting started and need assistance or face any bugs, join our active 
 <a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
+## ⚙️ Technologies
 
-- Next.js
-- TypeScript
-- Liveblocks
-- Fabric.js
-- Shadcn
-- Tailwind CSS
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Liveblocks](https://liveblocks.io/)
+- [Fabric.js](https://fabricjs.com/)
+- [Shadcn](https://shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## <a name="features">🔋 Features</a>
 
