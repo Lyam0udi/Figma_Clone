@@ -9,7 +9,8 @@ A clone of Figma built with Next.js, TypeScript, Liveblocks, Fabric.js, Shadcn, 
 3. 🔋 [Features](#features)
 4. 🤸 [Set Up](#set-up)
 5. 🕸️ [Snippets](#snippets)
-6. 🚀 [License](#license)
+6. 🔗 [Demo](#demo)
+7. 🚀 [License](#license)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -780,6 +781,8 @@ export const PinnedThread = ({ thread, onFocus, ...props }: Props) => {
 ```
 
 </details>
+
+## <a name="demo">🔗 Demo</a>
 
 ## <a name="license">🚀 License</a>
 
