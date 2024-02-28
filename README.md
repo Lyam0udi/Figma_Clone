@@ -7,18 +7,14 @@ A clone of Figma built with Next.js, TypeScript, Liveblocks, Fabric.js, Shadcn, 
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Technologies](#technologies)
 3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
+4. 🤸 [Set Up](#set-up)
 5. 🕸️ [Snippets](#snippets)
 6. 🔗 [Links](#links)
 7. 🚀 [More](#more)
 
 ## <a name="introduction">🤖 Introduction</a>
 
-A minimalistic Figma clone to show how to add real-world features like live collaboration with cursor chat, comments, reactions, and drawing designs (shapes, image upload) on the canvas using fabric.js.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+A minimalistic Figma clone that goes beyond the basics, showcasing the integration of real-world features for seamless collaboration and design creation. This project demonstrates the implementation of live collaboration with cursor chat, comments, reactions, and the ability to draw designs on the canvas using Fabric.js.
  
 ## <a name="introduction">⚙️ Technologies</a>
 
@@ -60,7 +56,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 and many more, including code architecture, advanced react hooks, and reusability 
 
-## <a name="quick-start">🤸 Quick Start</a>
+## <a name="set-up">🤸 Set Up</a>
 
 Follow these steps to set up the project locally on your machine.
 
