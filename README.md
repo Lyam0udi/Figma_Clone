@@ -15,7 +15,7 @@ A clone of Figma built with Next.js, TypeScript, Liveblocks, Fabric.js, Shadcn, 
 
 A minimalistic Figma clone that goes beyond the basics, showcasing the integration of real-world features for seamless collaboration and design creation. This project demonstrates the implementation of live collaboration with cursor chat, comments, reactions, and the ability to draw designs on the canvas using Fabric.js.
  
-## <a name="introduction">⚙️ Technologies</a>
+## <a name="technologies">⚙️ Technologies</a>
 
 - [Next.js](https://nextjs.org/) : React framework for building fast and scalable web applications.
 - [TypeScript](https://www.typescriptlang.org/) : Enhance your development experience with statically typed JavaScript.
