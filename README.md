@@ -12,14 +12,6 @@ A clone of Figma built with Next.js, TypeScript, Liveblocks, Fabric.js, Shadcn, 
 6. 🔗 [Links](#links)
 7. 🚀 [More](#more)
 
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/oKIThIihv60" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
 ## <a name="introduction">🤖 Introduction</a>
 
 A minimalistic Figma clone to show how to add real-world features like live collaboration with cursor chat, comments, reactions, and drawing designs (shapes, image upload) on the canvas using fabric.js.
@@ -27,8 +19,8 @@ A minimalistic Figma clone to show how to add real-world features like live coll
 If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
 <a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
-
-## ⚙️ Technologies
+ 
+## <a name="introduction">⚙️ Technologies</a>
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -37,29 +29,34 @@ If you're getting started and need assistance or face any bugs, join our active 
 - [Shadcn](https://shadcn.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-## <a name="features">🔋 Features</a>
+## <a name="features">🚀 Features</a>
 
-👉 **Multi Cursors, Cursor Chat, and Reactions**: Allows multiple users to collaborate simultaneously by showing individual cursors, enabling real-time chat, and reactions for interactive communication.
+👥 **Collaboration Tools**
+- **Multi Cursors, Cursor Chat, and Reactions**: Simultaneous collaboration with individual cursors, real-time chat, and reactions for interactive communication.
+- **Active Users**: Display a list of engaged users in the collaborative environment.
 
-👉 **Active Users**: Displays a list of currently active users in the collaborative environment, providing visibility into who is currently engaged.
+💬 **Communication and Feedback**
+- **Comment Bubbles**: Attach comments to specific canvas elements, fostering communication and feedback.
+- **History**: Review the chronological history of actions and changes on the canvas.
 
-👉 **Comment Bubbles**: Enables users to attach comments to specific elements on the canvas, fostering communication and feedback on design components.
+🎨 **Design Creation**
+- **Creating Different Shapes**: Generate a variety of shapes on the canvas for diverse design elements.
+- **Uploading Images**: Import images onto the canvas to expand the range of visual content.
 
-👉 **Creating Different Shapes**: Provides tools for users to generate a variety of shapes on the canvas, allowing for diverse design elements
+✏️ **Artistic Expression**
+- **Freeform Drawing**: Draw freely on the canvas, promoting artistic expression and creative design.
 
-👉 **Uploading Images**: Import images onto the canvas, expanding the range of visual content in the design
+🔄 **Workflow Enhancement**
+- **Undo/Redo**: Reverse or restore previous actions for flexible design decision-making.
+- **Keyboard Actions**: Utilize keyboard shortcuts for various actions, enhancing efficiency and accessibility.
 
-👉 **Customization**: Allows users to adjust the properties of design elements, offering flexibility in customizing and fine-tuning visual components
+🛠️ **Canvas Management**
+- **Deleting, Scaling, Moving, Clearing**: Manage design elements with functions like deletion, scaling, moving, and clearing the canvas.
+- **Exporting Canvas**: Export the final design for external use.
 
-👉 **Freeform Drawing**: Enables users to draw freely on the canvas, promoting artistic expression and creative design.
-
-👉 **Undo/Redo**: Provides the ability to reverse (undo) or restore (redo) previous actions, offering flexibility in design decision-making
-
-👉 **Keyboard Actions**: Allows users to utilize keyboard shortcuts for various actions, including copying, pasting, deleting, and triggering shortcuts for features like opening cursor chat, reactions, and more, enhancing efficiency and accessibility.
-
-👉 **History**: Review the chronological history of actions and changes made on the canvas, aiding in project management and version control.
-
-👉 **Deleting, Scaling, Moving, Clearing, Exporting Canvas**: Offers a range of functions for managing design elements, including deletion, scaling, moving, clearing the canvas, and exporting the final design for external use.
+🏗️ **Advanced Features**
+- **Code Architecture**: Explore the underlying code structure for a deeper understanding.
+- **Advanced React Hooks and Reusability**: Dive into advanced React hooks and reusable components for efficient development.
 
 and many more, including code architecture, advanced react hooks, and reusability 
 
