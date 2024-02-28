@@ -18,12 +18,12 @@ A minimalistic Figma clone that goes beyond the basics, showcasing the integrati
  
 ## <a name="introduction">⚙️ Technologies</a>
 
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Liveblocks](https://liveblocks.io/)
-- [Fabric.js](https://fabricjs.com/)
-- [Shadcn](https://shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/) : React framework for building fast and scalable web applications.
+- [TypeScript](https://www.typescriptlang.org/) : Enhance your development experience with statically typed JavaScript.
+- [Liveblocks](https://liveblocks.io/) : Integrate live collaboration features effortlessly into your application.
+- [Fabric.js](https://fabricjs.com/) : Leverage the flexibility of the powerful and interactive HTML5 canvas library for graphics.
+- [Shadcn](https://shadcn.com/) : Elevate the visual aesthetics of your designs with the Shadcn library.
+- [Tailwind CSS](https://tailwindcss.com/) : Craft stylish and responsive user interfaces with the utility-first CSS framework.
 
 ## <a name="features">🚀 Features</a>
 
