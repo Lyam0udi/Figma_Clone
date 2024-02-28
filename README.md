@@ -783,6 +783,7 @@ export const PinnedThread = ({ thread, onFocus, ...props }: Props) => {
 </details>
 
 ## <a name="demo">🔗 Demo</a>
+![Figma](https://github.com/Lyam0udi/Figma_Clone/assets/67929106/8e420a71-681b-450a-91d0-4c036cdfbf63)
 
 ## <a name="license">🚀 License</a>
 
