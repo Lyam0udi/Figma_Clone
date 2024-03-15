@@ -1,6 +1,5 @@
 # FigmaClone
 
-
 A Clone of Figma built with Next.js, TypeScript, Liveblocks, Fabric.js, Shadcn, and Tailwind CSS.
 
 ## 📋 Table of Contents
